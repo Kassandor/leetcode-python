@@ -26,18 +26,18 @@ class Solution:
             l2_value = l2.val if l2 else 0
             total = l1_value + l2_value + remainder
 
-            # everything greater than 10 is transferred to the next digit
+            # Каждый раз, когда сумма больше 10 - переносим остаток на следующее число
             remainder = total // 10
 
-            # number must be less by 10
+            # Число должно быть меньше 10
             head_node.next = ListNode(total % 10)
             head_node = head_node.next
 
-            # go to next link, check that linked list is not empty
+            # Переходим к следующей ноде, если она существует
             l1 = l1.next if l1 else None
             l2 = l2.next if l2 else None
 
-        # return head_node
+        # Возвращаем первую ноду
         return fake_node.next
 
 
