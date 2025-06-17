@@ -1,2 +1,2 @@
 # leetcode
-my trainings in leetcode, python, js, sql, databases, other
+my trainings in leetcode on python
