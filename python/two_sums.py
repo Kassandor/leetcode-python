@@ -1,17 +1,23 @@
-from typing import List
-
-
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]:
-        nums_to_index = dict()
+    @staticmethod
+    def two_sum(nums_: list[int], target: int) -> list[int]:
+        """
+        Берем число из массива, если разница target и этого числа отсутствует в хеш-таблице
+         - добавляем число в хеш-таблицу (ключ = число, значение = индекс числа из исходного массива) и идем дальше.
+         Если нашли в хеш-таблице, возвращаем индексы (target - num).idx, num.idx
+        :param nums_: list[int]
+        :param target: int
+        :return: list[int]
+        """
+        num_to_index = {}
+        result = []
+        for idx, num in enumerate(nums_):
+            if target - num in num_to_index:
+                result = [num_to_index[target - num], idx]
+                break
+            num_to_index[num] = idx
+        return result
 
-        for index, num in enumerate(nums):
-            difference = target - num
-            if difference in nums_to_index:
-                return [nums_to_index.get(difference), index]
-            if not num in nums_to_index:
-                nums_to_index.update({num: index})
+nums = [2, 7, 11, 15]
 
-        return []
-
-print(Solution().twoSum([2, -5, 11, -5], -10))
+print(Solution.two_sum(nums, 9))

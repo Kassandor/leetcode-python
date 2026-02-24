@@ -3,5 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.10.12 WSL (Ubuntu): (/home/alex/.cache/pypoetry/virtualenvs/leetcode-IynULTE--py3.10/bin/python3.10)" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.10.12 WSL (Ubuntu): (/home/alex/.cache/pypoetry/virtualenvs/leetcode-IynULTE--py3.10/bin/python3.10)" project-jdk-type="Python SDK" />
+  <component name="ProjectRootManager" version="2" project-jdk-name="3.11 WSL (Ubuntu-24.04): (/home/alex/study/leetcode-python/.venv/bin/python)" project-jdk-type="Python SDK" />
 </project>
