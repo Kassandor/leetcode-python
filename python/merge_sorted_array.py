@@ -13,12 +13,13 @@ class Solution:
         :param n: Количество значимых элементов во второстепенном массиве
         :return: None
         """
+
         insert_pos = m + n - 1
         m -= 1
         n -= 1
 
         while n >= 0:
-            if m >= 0 and nums1[m] > nums2[n]:
+            if nums1[m] > nums2[n]:
                 nums1[insert_pos] = nums1[m]
                 m -= 1
             else:
@@ -29,11 +30,11 @@ class Solution:
 
 nums_1 = [1, 2, 3, 0, 0, 0]
 m_ = 3  # Три значимых элемента, остальное - нули заполнители
-nums_2 = [2, 5, 6]  # Все элементы - значимые (их три)
+nums_2 = [1, 1, 2]  # Все элементы - значимые (их три)
 n_ = 3
 
 print('before_merge')
 print(nums_1)
-Solution.merge(nums_1, m_, nums_1, n_)
+Solution.merge(nums_1, m_, nums_2, n_)
 print('after_merge')
 print(nums_1)
